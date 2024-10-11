@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="search-transaction" placeholder="Search Transaction">
+            <select id="select-month">
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                </select>
+        </div>
+        <table id="transactions-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Sold</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button id="previous-page">Previous</button>
+            <span id="page-number">1</span>
+            <button id="next-page">Next</button>
+        </div>
+        <div class="statistics">
+            <h2>Statistics - <span id="selected-month"></span></h2>
+            <p>Total Sales: <span id="total-sales"></span></p>
+            <p>Total Sold Items: <span id="total-sold-items"></span></p>
+            <p>Total Not Sold Items: <span id="total-not-sold-items"></span></p>
+        </div>
+        <div class="chart-container">
+            <canvas id="bar-chart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Transaction Dashboard</h1>
+    
+    <!-- Transaction Table Section -->
+    <div class="transaction-table">
+      <input type="text" id="search" placeholder="Search transaction">
+      <select id="month-dropdown">
+        <option value="January">Jan</option>
+        <option value="February">Feb</option>
+        <option value="March" selected>Mar</option>
+        <option value="April">Apr</option>
+        <option value="May">May</option>
+        <option value="June">Jun</option>
+        <option value="July">Jul</option>
+        <option value="August">Aug</option>
+        <option value="September">Sep</option>
+        <option value="Octomber">Oct</option>
+        <option value="November">Nov</option>
+        <option value="December">Dec</option>
+
+
+
+        <!-- Add more months -->
+      </select>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Sold</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody id="transaction-body">
+          <!-- Transactions will be inserted here dynamically -->
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <button id="previous">Previous</button>
+        <button id="next">Next</button>
+      </div>
+    </div>
+
+    <!-- Transaction Statistics Section -->
+    <div class="transaction-stats">
+      <h2>Statistics - <span id="selected-month">March</span></h2>
+      <p>Total Sale: <span id="total-sale">0</span></p>
+      <p>Total Sold Items: <span id="total-sold-items">0</span></p>
+      <p>Total Unsold Items: <span id="total-unsold-items">0</span></p>
+    </div>
+
+    <!-- Transaction Bar Chart Section -->
+    <div class="transaction-chart">
+      <h2>Bar Chart Stats - <span id="chart-month">March</span></h2>
+      <canvas id="bar-chart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
